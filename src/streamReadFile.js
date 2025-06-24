@@ -1,6 +1,6 @@
-import fs from 'fs';
-import { pipeline } from 'node:stream/promises';
-import path from 'path';
+const fs = require('node:fs');
+const pipeline = require('node:stream/promises');
+const path = require('node:path');
 
 const fileUrl = 'https://www.gutenberg.org/files/2701/2701-0.txt';
 const outputFilePath = path.join(process.cwd(), 'moby.md');

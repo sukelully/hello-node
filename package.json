@@ -2,6 +2,7 @@
   "name": "hello-node",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node src/app.js",
     "dev": "node --run start -- --watch",
