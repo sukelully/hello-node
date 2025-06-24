@@ -6,6 +6,7 @@ function readFile() {
       console.error(err);
     } else {
       console.log(data);
+      console.log("test 2");
     }
   });
 }
