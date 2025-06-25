@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-// Load HTTP module
 const http = require('http');
+const express = require('express');
 
 function createServer(hostname = '127.0.0.1', port = 3000) {
   // Create HTTP server and listen on port 3000 for requests
@@ -20,4 +20,12 @@ function createServer(hostname = '127.0.0.1', port = 3000) {
   return server;
 }
 
-module.exports = createServer;
+function expressServer() {
+  const app = express();
+
+  app.get('/', (req, res) => res.send('Hello World!'));
+  console.log('listening');
+  app.listen(8080);
+}
+
+module.exports = { createServer, expressServer };

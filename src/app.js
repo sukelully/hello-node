@@ -1,4 +1,4 @@
-const createServer = require('./helloNode.js');
+const { createServer, expressServer } = require('./helloNode.js');
 const { writeFile, appendFile } = require('./writeFile.js');
 const { readFile } = require('./readFile.js');
 // const { fileUrl, outputFilePath, downloadFile, readFileAsync } = require('./streamReadFile.js');
@@ -6,7 +6,8 @@ const { readFile } = require('./readFile.js');
 // createServer('localhost', 4000);
 // writeFile();
 // appendFile();
-readFile();
+// readFile();
+expressServer();
 // try {
 //   await downloadFile(fileUrl, outputFilePath);
 //   await readFileAsync(outputFilePath);
